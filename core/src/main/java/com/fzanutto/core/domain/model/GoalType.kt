@@ -1,7 +1,5 @@
 package com.fzanutto.core.domain.model
 
-import java.lang.Exception
-
 sealed class GoalType(val name: String) {
     object LoseWeight: GoalType("lose_wight")
     object KeepWeight: GoalType("keep_wight")
