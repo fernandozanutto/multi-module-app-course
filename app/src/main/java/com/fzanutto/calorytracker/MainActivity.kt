@@ -15,6 +15,8 @@ import com.fzanutto.calorytracker.ui.theme.CaloryTrackerTheme
 import com.fzanutto.core.navigation.Route
 import com.fzanutto.onboarding_presentation.age.AgeScreen
 import com.fzanutto.onboarding_presentation.gender.GenderScreen
+import com.fzanutto.onboarding_presentation.height.HeightScreen
+import com.fzanutto.onboarding_presentation.weight.WeightScreen
 import com.fzanutto.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,10 +50,16 @@ class MainActivity : ComponentActivity() {
                             GenderScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.HEIGHT) {
-
+                            HeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.WEIGHT) {
-
+                            WeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.NUTRIENT_GOAL) {
 
