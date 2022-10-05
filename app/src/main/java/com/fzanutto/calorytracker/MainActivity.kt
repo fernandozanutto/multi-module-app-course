@@ -18,6 +18,7 @@ import com.fzanutto.onboarding_presentation.age.AgeScreen
 import com.fzanutto.onboarding_presentation.gender.GenderScreen
 import com.fzanutto.onboarding_presentation.goal.GoalScreen
 import com.fzanutto.onboarding_presentation.height.HeightScreen
+import com.fzanutto.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.fzanutto.onboarding_presentation.weight.WeightScreen
 import com.fzanutto.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -70,7 +71,7 @@ class MainActivity : ComponentActivity() {
                             ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL) {
-
+                            GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW) {
 
