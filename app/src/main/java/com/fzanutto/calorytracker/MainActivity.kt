@@ -1,5 +1,6 @@
 package com.fzanutto.calorytracker
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,10 +22,12 @@ import com.fzanutto.onboarding_presentation.height.HeightScreen
 import com.fzanutto.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.fzanutto.onboarding_presentation.weight.WeightScreen
 import com.fzanutto.onboarding_presentation.welcome.WelcomeScreen
+import com.fzanutto.tracker_presentation.tracker_overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -74,7 +77,7 @@ class MainActivity : ComponentActivity() {
                             GoalScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.TRACKER_OVERVIEW) {
-
+                            TrackerOverviewScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.SEARCH) {
 

@@ -1,4 +1,4 @@
-package com.fzanutto.calorytracker.ui.theme
+package com.fzanutto.core_ui
 
 import androidx.compose.ui.graphics.Color
 
