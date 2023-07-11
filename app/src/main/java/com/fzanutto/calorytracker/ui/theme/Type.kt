@@ -1,4 +1,4 @@
-package com.fzanutto.calorytrackerprep.ui.theme
+package com.fzanutto.calorytracker.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
